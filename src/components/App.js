@@ -1,11 +1,18 @@
 
-import React from "react";
+import React,{useState} from "react";
 import './../styles/App.css';
 
 const App = () => {
+  const [text, setText] = useState("");
+//   function setText() {
+//     setText(value);
+// }
   return (
     <div>
-        {/* Do not remove the main div */}
+      <form action="">
+        <input onChange={(e) => setText(e.target.value)} type="text" placeholder="Input Something" value={Text} />
+      </form>
+      <p>Hello { text}!</p>
     </div>
   )
 }
