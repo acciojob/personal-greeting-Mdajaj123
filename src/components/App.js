@@ -10,9 +10,11 @@ const App = () => {
   return (
     <div>
       <form action="">
-        <input onChange={(e) => setText(e.target.value)} type="text" placeholder="Input Something"  />
+        <input onChange={(e => setText(e.target.value))} type="text" placeholder="Input Something"  />
       </form>
-      <p>Hello {text}!</p>
+      {
+        text != "" ? <p>Hello {text }!</p>:""
+      }
     </div>
   )
 }
